@@ -58,5 +58,15 @@ INSERT INTO formapago_banco VALUES(null,'Cheque','Promerica');
 
 Select * from formapago_banco;
 
-CREATE TABLE 
+CREATE TABLE paqueteturistico(
+	codpaq varchar(75) primary key not null,
+	pais varchar(75) not null,
+	precio money not null,
+	id_agencia int foreign key references agencia(codigo)
+);
 
+INSERT INTO paqueteturistico VALUES(1500,'Colombia',23000,50);
+INSERT INTO paqueteturistico VALUES(1501,'Guatemala',17000,50);
+INSERT INTO paqueteturistico VALUES(1503,'Colombia',22000,47);
+
+select * from paqueteturistico;
